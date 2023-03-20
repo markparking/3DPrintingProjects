@@ -71,14 +71,14 @@
 
     private void SaveData()
     {
-        var dataHandler = new DataHandler("Server=DESKTOP-FBC0J6Q;Database=3DDB;Integrated Security=true;");
+        var dataHandler = new DataHandler("Server=PARKINGLAPTOP\\SQLEXPRESS;Database=3DDB;Integrated Security=true;");
         dataHandler.AddData(FileName, ToWho, Link);
         DataItems = GetData();
     }
 
     private void DeleteData(string FileName, string ToWho, string Link)
     {
-        var dataHandler = new DataHandler("Server=DESKTOP-FBC0J6Q;Database=3DDB;Integrated Security=true;");
+        var dataHandler = new DataHandler("Server=PARKINGLAPTOP\\SQLEXPRESS;Database=3DDB;Integrated Security=true;");
         dataHandler.DeleteData(FileName, ToWho, Link);
         DataItems = GetData();
         StateHasChanged();
@@ -86,7 +86,7 @@
 
     private List<DataItem> GetData()
     {
-        var dataHandler = new DataHandler("Server=DESKTOP-FBC0J6Q;Database=3DDB;Integrated Security=true;");
+        var dataHandler = new DataHandler("Server=PARKINGLAPTOP\\SQLEXPRESS;Database=3DDB;Integrated Security=true;");
         return dataHandler.GetData();
     }
 
